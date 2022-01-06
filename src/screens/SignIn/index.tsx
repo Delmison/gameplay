@@ -13,13 +13,10 @@ import IllustrationImg from '../../assets/illustration.png';
 import { styles }  from './styles';
 
 import { ButtonIcon } from '../../components/ButtonIcon';
-import { Home } from '../Home';
-
 
 export function SignIn(){
   const navigation = useNavigation();
-
-  function heandleSignIn(){
+  function heandleSignIn() {
     navigation.navigate('Home');
   }
 
@@ -46,12 +43,9 @@ export function SignIn(){
 
       <ButtonIcon 
         title="Entrar com Discord"
-        activeOpacity={0.6}
         onPress={heandleSignIn}
       />
-
       </View>
-
     </View>
-  )
+  );
 }
