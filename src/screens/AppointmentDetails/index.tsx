@@ -15,6 +15,9 @@ import BannerImg from '../../assets/banner.png';
 import { Background } from '../../components/Background';
 import { ListHeader } from '../../components/ListHeader';
 import { Header } from '../../components/Header';
+import { Member } from '../../components/Member';
+import { ListDivider } from '../../components/ListDivider';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 
 export function AppointmentDetails() {
@@ -67,9 +70,14 @@ export function AppointmentDetails() {
                 data={members}
                 keyExtractor={item=>item.id}
                 renderItem={({item})=>(
-                    
+                    <Member data={item} />
                 )}
+                ItemSeparatorComponent={()=> <ListDivider />}
+                style={styles.member}
             />
+            <View style={styles.footer}>
+                <ButtonIcon title="Entrar na partida" />
+            </View>
         </Background>
     );
 }
